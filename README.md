@@ -10,11 +10,11 @@ docker, docker-compose를 배포하고, harbor 오프라인 installer 파일을 
 3. 생성한 인증서를 harbor.yml 파일 내에 지정할 경로 폴더에 저장합니다.
    
    port: 443
-   '# The path of cert and key files for nginx
+   The path of cert and key files for nginx
    certificate: /your/certificate/path
    private_key: /your/private/key/path
-
-    insecure: true
+   
+   insecure: true
    
 5. ./prepare 파일을 실행하면, harbor 설정을 재구성을 진행합니다.
 6. sudo docker-compose up -d 명령어로 다시 harbor 서비스를 시작합니다.
