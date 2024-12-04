@@ -10,7 +10,7 @@ docker, docker-compose를 배포하고, harbor 오프라인 installer 파일을 
 3. 생성한 인증서를 harbor.yml 파일 내에 지정할 경로 폴더에 저장합니다.
    
    port: 443
-   # The path of cert and key files for nginx
+   '# The path of cert and key files for nginx
    certificate: /your/certificate/path
    private_key: /your/private/key/path
 
