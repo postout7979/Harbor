@@ -26,7 +26,7 @@ fi
 apt update -yq
 swapoff --all
 sed -ri '/\sswap\s/s/^#?/#/' /etc/fstab
-#ufw disable #Do Not Do This In Production
+ufw disable #Do Not Do This In Production
 echo "Housekeeping done"
 
 #Install Latest Stable Docker Release
@@ -73,4 +73,4 @@ sed -e '/\/your\/private\/key\/path$/ s/^#*/#/' -i harbor.yml
 
 mkdir -p /var/log/harbor
 ./install.sh --with-trivy
-echo -e "Harbor Installation Complete \n\nPlease log out and log in or run the command 'newgrp docker' to use Docker without sudo\n\nLogin to your harbor instance:\n docker login -u admin -p Harbor12345 $IPorFQDN\n\n:::: ufw firewall was NOT disabled!\n"
+echo -e "Harbor Installation Complete \n\nPlease log out and log in or run the command 'newgrp docker' to use Docker without sudo\n\nLogin to your harbor instance:\n docker login -u admin -p Harbor12345 $IPorFQDN\n\n:::: ufw firewall was disabled!\n"
